@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Llama Chat App
+
+A modern chat application powered by **Llama 3.3 70B** via Groq, built with Next.js and deployable to Vercel.
+
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8)
+
+## Features
+
+- 🦙 **Llama 3.3 70B** - One of the most capable open-source AI models
+- ⚡ **Groq API** - Lightning-fast inference
+- 🎨 **Modern UI** - Beautiful dark theme with gradient accents
+- 📱 **Responsive** - Works on desktop and mobile
+- 🚀 **Vercel Ready** - One-click deployment
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 18+ 
+- A free Groq API key from [console.groq.com](https://console.groq.com/keys)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/llama-chat-app.git
+   cd llama-chat-app
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env.local
+   ```
+   
+   Then edit `.env.local` and add your Groq API key:
+   ```
+   GROQ_API_KEY=your_groq_api_key_here
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy to Vercel
 
-## Deploy on Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/llama-chat-app&env=GROQ_API_KEY&envDescription=Get%20your%20free%20API%20key%20from%20Groq&envLink=https://console.groq.com/keys)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Or deploy manually:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com) and import your repository
+3. Add the `GROQ_API_KEY` environment variable in Vercel's settings
+4. Deploy!
+
+## Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **AI SDK**: [Vercel AI SDK](https://sdk.vercel.ai/)
+- **LLM Provider**: [Groq](https://groq.com/) (Llama 3.3 70B)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+
+## Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `GROQ_API_KEY` | Your Groq API key | Yes |
+
+## License
+
+MIT
